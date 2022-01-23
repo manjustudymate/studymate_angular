@@ -17,7 +17,7 @@ export class Component1Component implements OnInit {
   public id2='id2';
   public class1='className1';
   public fontColor='';
-  public textColor="'green'";
+  public textColor="red";
 
 
 
@@ -27,8 +27,14 @@ export class Component1Component implements OnInit {
   public getName(){
     return this.name="Manjunath";
   }
+  
   public getColor(){
     return this.fontColor='green';
+  }
+
+  public mystyles={
+    color:"green",
+    fontStyle:"italic"
   }
 
   constructor() { }

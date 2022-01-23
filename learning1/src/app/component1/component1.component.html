@@ -12,10 +12,16 @@
 <br>
 <input bind-disabled='isFalse' type="text" value="Iam enabled">
 <br>
---------------- 3)Class Binding ---------------
+--------------- 3)Class Binding and Style Binding ---------------
 <div [class]='class1'>Iam classname1</div>
 <div class={{class1}}>Iam className1</div>
 <div [class.textColorUsingCSSFile]='isTrue'>Iam in green</div>
+<div [style.color]="textColor">Iam in red color</div>
+<div [style.color]="'green'">Iam Green</div>
+<div [style.color]=" isFalse ? 'green' : 'blue'">Iam Green or Blue</div>
+<div [ngStyle]='mystyles'>Iam in green and italic</div>
+
+ 
 
 
 
