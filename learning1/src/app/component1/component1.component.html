@@ -1,0 +1,21 @@
+<p>component1</p>
+<h3>{{variable1}}</h3>
+<div>{{isTrue}}</div>
+<div>{{isFalse}}</div>
+--------------- 1)Interpolation-----------------
+<h3>User Name is : {{userName}}</h3>
+<h3>User Name from getName() method : {{getName()}} </h3>
+--------------- 2)Property Binding---------------
+<h3 [id]='id1'>Iam id1</h3>
+<h3 id={{id1}}>Iam id2</h3>
+<input [disabled]="isTrue" type="text" value="Iam disabled">
+<br>
+<input bind-disabled='isFalse' type="text" value="Iam enabled">
+<br>
+--------------- 3)Class Binding ---------------
+<div [class]='class1'>Iam classname1</div>
+<div class={{class1}}>Iam className1</div>
+<div [class.textColorUsingCSSFile]='isTrue'>Iam in green</div>
+
+
+
