@@ -1,5 +1,6 @@
 import { getCurrencySymbol } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import {StudentsService} from '../students.service'
 
 @Component({
   selector: 'app-component1',
@@ -19,7 +20,7 @@ export class Component1Component implements OnInit {
   public fontColor='';
   public textColor="red";
   public textColorGreen="green";
-
+  
 
 
 
@@ -38,9 +39,15 @@ export class Component1Component implements OnInit {
     fontStyle:"italic"
   }
 
-  constructor() { }
+  public students:any = [];
+  
+  constructor(private _stdDetails : StudentsService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._stdDetails.getStudents()
+    .subscribe(data => this.students = data)
   }
+
+  
 
 }

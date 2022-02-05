@@ -1,0 +1,13 @@
+button{
+    color:rgba(0, 124, 128, 0.664);
+    background-color: rgb(198, 231, 144);
+    margin-bottom: 3px;
+}
+button:hover{
+    background-color: rgb(231, 144, 217);
+    margin-bottom: 4px;
+}
+.buttons{
+ flex-direction: column;
+ border-bottom: 2px green;
+}

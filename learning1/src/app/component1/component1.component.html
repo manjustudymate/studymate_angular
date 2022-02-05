@@ -22,6 +22,20 @@
 <div [ngStyle]='mystyles'>Iam in green and italic</div>
 
  
+-----------------  Pipes on Students Data -------------------
+<div>{{students | json}}</div>
+
+<div> {{ 0.25 | currency:'INR' }} </div>
+<div> {{ 0.25 | currency:'USD' }} </div>
+<div> {{ 0.25 | currency:'EUR' }} </div>
+
+<div *ngFor='let x of students'>
+    <div>{{x.id}} -- {{x.Tech}}</div>
+</div>
+
+----------------- services ---------------
+
+
 
 
 
