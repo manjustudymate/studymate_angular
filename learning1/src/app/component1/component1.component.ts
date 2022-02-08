@@ -41,6 +41,8 @@ export class Component1Component implements OnInit {
 
   public students:any = [];
   
+
+  
   constructor(private _stdDetails : StudentsService) { }
 
   ngOnInit() {

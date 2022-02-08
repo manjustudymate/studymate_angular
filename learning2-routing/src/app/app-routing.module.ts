@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CourseListComponent } from './course-list/course-list.component';
+import { JokesComponent } from './jokes/jokes.component';
 import { StudentListComponent } from './student-list/student-list.component';
 
 const routes: Routes = [
   {path:'student' , component:StudentListComponent},
   {path:'course' , component:CourseListComponent},
-  {path : "**" , component: StudentListComponent} 
+  {path :'app-jokes', component:JokesComponent },
+  {path : "**" , component: StudentListComponent }
 
 ];
 
@@ -16,5 +18,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const MyRouters = [
-  StudentListComponent, CourseListComponent
+  StudentListComponent, CourseListComponent,JokesComponent
 ]
