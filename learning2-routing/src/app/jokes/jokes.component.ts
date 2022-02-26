@@ -9,22 +9,34 @@ import { JokeService } from '../joke.service';
     </p>
 
 <div class="joke">
-    <div *ngFor="let x of jokeMessage">{{x|json}}</div>
+    
+    <div>{{jokeMessage |json}}</div>
 </div>
 <button (click)="getJoke()">Generate</button>
+<button (click)="getJoke1()">Generate</button>
+
   `,
   styles: [
   ]
 })
 export class JokesComponent implements OnInit {
- jokeMessage="";
-  constructor(private  joke:JokeService ) { }
+ jokeMessageJson="";
+  constructor(private  joke:JokeService ) { 
 
+  }
+jokeMessage=''
 getJoke(){
  this.joke.get().subscribe(response => {
-  this.jokeMessage=response.dataseries ;
+  this.jokeMessageJson=response;
 })
 }
+
+getJoke1(){
+
+  this.jokeMessage=this.jokeMessageJson[3];
+
+}
+
   ngOnInit(): void {
   }
 

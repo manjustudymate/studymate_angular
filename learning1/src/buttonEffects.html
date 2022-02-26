@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 0px;
+            left: 0px;
+            display: flex;
+            align-items: center;
+        }
+        .btn{
+            position: relative;
+            justify-content: center;
+            width: 100px;
+            align-items: center;
+            align-content: center;
+            padding: 10px;
+            width: 100px;
+            background-color: aquamarine;
+            font-weight: bold;
+            
+        }
+           
+       
+        .btn-first::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: blueviolet;
+            color: blueviolet;
+            height: 100%;
+            left: 0px;
+            bottom: 0px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn-first::after{
+            transform: scale(1,0);
+            transition: transform 0.3s ease-in-out;
+         
+            
+        }
+        .btn-first:hover::after{
+            transform: scale(1,1);
+            
+        }
+        .btn-first:hover{
+            color: blueviolet;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <button class="btn btn-first">My button</button>
+</div>
+</body>
+</html>

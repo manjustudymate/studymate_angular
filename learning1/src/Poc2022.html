@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onchange="var win = window.open(this.value, '_blank');win.focus();" -->
+    <select id="mySelect" onchange="myFunction()">
+        <option value="Volvo">Volvo</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+      </select>
+
+      <br><br>
+      <div>
+          <a href="" >Volvo</a>
+          <a href="" >Mercedes</a>
+          <a href="" >Audi</a>
+          <a href="" >BMW</a>
+      </div>
+<div>
+    <h4 id="name"></h4>
+    <h4 id="color"></h4>
+    <h4 id="price"></h4>
+</div>
+</body>
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("name").innerHTML =  x;
+  document.getElementById("color").innerHTML = obj.volvo.color;
+  document.getElementById("price").innerHTML =  obj.volvo.price;
+
+}
+
+
+
+
+obj={}
+
+obj.volvo={
+    name:'volvo',
+    color:'Red',
+    price:'10C'
+}
+obj.mercedes={
+    name:'mercedes',
+    color:'Blue',
+    price:'20C'
+}
+obj.audi={
+    name:'audi',
+    color:'Green',
+    price:'30C'
+}
+obj.BMW={
+    name:'BMW',
+    color:'Black',
+    price:'40C'
+}
+
+</script>
+</html>
