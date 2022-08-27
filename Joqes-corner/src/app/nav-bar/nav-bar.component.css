@@ -1,0 +1,30 @@
+mat-toolbar,span{
+    justify-content: space-between;
+    margin-right: 15px;
+}
+.middle{
+    text-align: center;
+}
+
+mat-expansion-panel{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.mat-accordion .mat-expansion-panel{
+    margin-bottom: 10px;
+  }
+  mat-expansion-panel-header{
+      margin-top: 1px;
+      margin-bottom: 2px;
+  }
+/*
+mat-expansion-panel-header{
+      background-color: rgb(138, 192, 201);
+  }
+.mat-expansion-panel-body{
+   background-color: cadetblue;
+}*/
+ 
